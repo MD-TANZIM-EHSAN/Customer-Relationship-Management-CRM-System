@@ -1,0 +1,51 @@
+
+create database  crm
+
+-- Create Customer Table
+CREATE TABLE Customer (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Email VARCHAR(100),
+    Phone VARCHAR(15),
+    Address VARCHAR(255),
+    RegistrationDate DATE
+);
+
+-- Create Product Table
+CREATE TABLE Product (
+    ProductID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Category VARCHAR(50),
+    Price DECIMAL(10, 2),
+    StockQuantity INT
+);
+
+
+
+
+
+-- Customers
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (1, 'Customer 1', 'customer1@example.com', '5555555001', '10 Main St, City 1', '2023-02-02');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (2, 'Customer 2', 'customer2@example.com', '5555555002', '20 Main St, City 2', '2023-03-03');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (3, 'Customer 3', 'customer3@example.com', '5555555003', '30 Main St, City 3', '2023-04-04');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (4, 'Customer 4', 'customer4@example.com', '5555555004', '40 Main St, City 4', '2023-05-05');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (5, 'Customer 5', 'customer5@example.com', '5555555005', '50 Main St, City 5', '2023-06-06');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (6, 'Customer 6', 'customer6@example.com', '5555555006', '60 Main St, City 6', '2023-07-07');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (7, 'Customer 7', 'customer7@example.com', '5555555007', '70 Main St, City 7', '2023-08-08');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (8, 'Customer 8', 'customer8@example.com', '5555555008', '80 Main St, City 8', '2023-09-09');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (9, 'Customer 9', 'customer9@example.com', '5555555009', '90 Main St, City 9', '2023-10-10');
+INSERT INTO Customer (CustomerID, Name, Email, Phone, Address, RegistrationDate) VALUES (10, 'Customer 10', 'customer10@example.com', '5555555010', '100 Main St, City 10', '2023-11-11');
+
+
+-- Products
+INSERT INTO product (ProductID, Name, category, StockQuantity, price) VALUES
+(1, 'T-Shirt', 'Clothing', 200, 15.99),
+(2, 'Football', 'Sports', 150, 25.50),
+(3, 'Sofa', 'Home', 50, 300.00),
+(4, 'Laptop', 'Electronics', 80, 1200.00),
+(5, 'Jeans', 'Clothing', 180, 40.00),
+(6, 'Tennis Racket', 'Sports', 120, 80.00),
+(7, 'Dining Table', 'Home', 60, 500.00),
+(8, 'Smartphone', 'Electronics', 90, 999.99),
+(9, 'Jacket', 'Clothing', 170, 55.00),
+(10, 'Basketball', 'Sports', 140, 30.00);
