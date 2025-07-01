@@ -1,7 +1,7 @@
 -- SALE_QUANTITY
 with CTE_TOTAL_SALES AS
 (SELECT p.ProductID,p.Name,p.StockQuantity,
-count(Quantity)  sale_quantity
+SUM(Quantity)  sale_quantity
 FROM crm.customer_orders co
 join product p on p.ProductID = co.ProductID
 group by p.ProductID,p.Name,p.StockQuantity),
